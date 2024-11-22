@@ -5,6 +5,8 @@ public class BreakingByVelocity : MonoBehaviour
     [SerializeField] GameObject brokenObject;
     Rigidbody rb;
 
+    bool isDestroyed;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,15 +16,19 @@ public class BreakingByVelocity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(rb.angularVelocity.magnitude);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Floor"))
         {
-            Destroy(gameObject);
-            Instantiate(brokenObject, transform.position, transform.rotation * Quaternion.Euler(90, 0, 0));            
+            if(isDestroyed == false)
+            {
+                Destroy(gameObject);
+                Instantiate(brokenObject, transform.position, transform.rotation * Quaternion.Euler(90, 0, 0)); 
+                isDestroyed = true;
+            }     
         }
     }
 }
