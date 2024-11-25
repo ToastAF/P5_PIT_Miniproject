@@ -43,9 +43,11 @@ GameObject:
   - component: {fileID: 5835580380160285299}
   - component: {fileID: 3770243494548044742}
   - component: {fileID: 2922268380570023787}
+  - component: {fileID: 51111176480981982}
   - component: {fileID: 5528443668863196475}
   - component: {fileID: 8362122475084370885}
   - component: {fileID: 4162691768077519103}
+  - component: {fileID: -2677316606967117306}
   m_Layer: 0
   m_Name: Glass bottle
   m_TagString: Untagged
@@ -145,6 +147,27 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6121590469811200223, guid: 2bfb5f5982b81274aa37ec3d69db7d5f, type: 3}
+--- !u!65 &51111176480981982
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6240611137484210549}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.008, y: 0.008, z: 0.0011218193}
+  m_Center: {x: 0, y: -1.9212262e-18, z: 0.000560912}
 --- !u!54 &5528443668863196475
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -171,7 +194,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!114 &8362122475084370885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,3 +331,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brokenObject: {fileID: 2026172753738441659, guid: 27727429e90a28848b6727aaad61c8d2, type: 3}
+--- !u!114 &-2677316606967117306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6240611137484210549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9c08eb9dcbe80e43a330a61ccc0ad5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Timer: 0

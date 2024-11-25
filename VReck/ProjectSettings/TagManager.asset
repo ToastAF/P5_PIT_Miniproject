@@ -16,8 +16,8 @@ TagManager:
   - NotCollideable
   - Collideable
   - Hand
-  - 
-  - 
+  - BatFollowPoint
+  - Bat
   - 
   - 
   - 
