@@ -37,16 +37,20 @@ public class BreakingBat: MonoBehaviour
     void BreakBat()
     {
         isBroken = true;
-        
+
         Destroy(gameObject);
 
         GameObject brokenBat = Instantiate(brokenBatPrefab, transform.position, transform.rotation);
 
-        Rigidbody brokenBatRB = brokenBat.GetComponent<Rigidbody>();
+        Rigidbody[] brokenBatRBs = brokenBat.GetComponentsInChildren<Rigidbody>();
 
         if (brokenBat != null)
         {
-            brokenBatRB.angularVelocity = rb.angularVelocity;
+            foreach (Rigidbody r in brokenBatRBs)
+            {
+                r.angularVelocity = rb.angularVelocity;
+            }
+                
         }
     }
 

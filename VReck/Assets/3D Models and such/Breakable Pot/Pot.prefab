@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brokenObject: {fileID: 683668222740274685, guid: 6ca42dc9e55e04745bf6a21204928966, type: 3}
+  velocityThreshold: 3
 --- !u!114 &8096621994589322972
 MonoBehaviour:
   m_ObjectHideFlags: 0
