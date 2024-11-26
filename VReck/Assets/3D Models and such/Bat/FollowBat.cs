@@ -11,7 +11,7 @@ public class FollowBat : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         rb.MovePosition(followPoint.transform.position);
         rb.MoveRotation(followPoint.transform.rotation);

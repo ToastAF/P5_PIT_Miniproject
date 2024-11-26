@@ -8,6 +8,7 @@ public class BreakingBat: MonoBehaviour
     [SerializeField] private int durabilityCount = 25;
     [SerializeField] private float iFrameTime = 1.5f;
     [SerializeField] private float velocityThreshold = 5.0f;
+    AudioSource sound;
 
     private Rigidbody rb;
     private bool isInvulnerable = false;
@@ -16,6 +17,7 @@ public class BreakingBat: MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        sound = GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -37,8 +39,10 @@ public class BreakingBat: MonoBehaviour
     void BreakBat()
     {
         isBroken = true;
-
+        
+        sound.Play();
         Destroy(gameObject);
+        
 
         GameObject brokenBat = Instantiate(brokenBatPrefab, transform.position, transform.rotation);
 
